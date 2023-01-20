@@ -8,7 +8,7 @@ Please follow below steps to setup the script.
 - Run 'python -m venv env' to create a virtual environment. It will create 'env' folder inside your repository.
 - Run 'source env/Scripts/activate' to activate the virtual environment.
 - Run 'pip install -r requirements.txt' to install all the dependencies in your virtual environment.
-- Go to config.py and add your github_token.
+- Create a new file 'github_token.txt' and add your github token there. Make sure there is no extra line at the end of file.
 
 Now your system is ready to execute the script. Follow below commands to run the script.
 
