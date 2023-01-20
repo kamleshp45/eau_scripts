@@ -1,6 +1,6 @@
 base_url = 'https://api.github.com'
 organization = 'pfizer'
-github_token = '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'
+github_token = ''
 edison_file_name = '.edison_automated_upgrade'
 input_file = 'subscription.csv'
 output_file = 'output.csv'

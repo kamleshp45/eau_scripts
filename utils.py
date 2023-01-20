@@ -22,7 +22,7 @@ def is_single_file_change(site, env, version):
     # print(pr_number)
 
     if pr_number == -1:
-        raise Exception(f'No PRs present for {site} for {env} with version {version}')
+        raise Exception(f'No open PR present for {site} for {env} with version {version}')
     
     # then send request for this to check how many files are changed and return the names of file
     changed_files_name = get_changed_files_for_pr(site, pr_number)
