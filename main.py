@@ -1,7 +1,5 @@
 from utils import *
 import pandas as pd
-# ans = is_single_file_change('pfleidenschaftnatur', 'prod', '7.24.3')
-# print(ans)
 
 data = pd.read_csv(input_file, header=0, names=['site', 'env', 'version'])
 statuses= []
@@ -17,14 +15,14 @@ except PermissionError as e:
 for site, env, version in zip(data['site'].values, data['env'].values, data['version'].values):
     try:
         status = is_single_file_change(site, env, version)
-        print(status)
+        print(f'EDNAU PR of {site} for {env} env with version {version} found. Has single file change: {status}')
     except Exception as e:
         print(e)
         status = 'Error'
     statuses.append(status)
 
 output = dict(site=data['site'].values.tolist(), env=data['env'].values.tolist(), version=data['version'].values.tolist(), status=statuses)
-print(output)
+# print(output)
 df = pd.DataFrame(output)
 try:
     df.to_csv(output_file, index=False)
