@@ -1,6 +1,7 @@
 from utils import *
 import pandas as pd
 
+'''
 data = pd.read_csv(input_file, header=0, names=['site', 'env', 'version'])
 statuses= []
 
@@ -28,3 +29,9 @@ try:
     df.to_csv(output_file, index=False)
 except PermissionError as e:
     print('Your output file is open in your system. Please close it to continue')
+'''
+# response = privateasset.request(f'/automated-upgrade/index.json', 'get')
+# print(response.text)
+
+# res = github_api.request('/repos/pfizer/pfleidenschaftnatur_profile/contents/.edison_automated_upgrade', 'get')
+# print(res.text)

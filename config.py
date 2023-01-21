@@ -1,4 +1,5 @@
-base_url = 'https://api.github.com'
+github_api_url = 'https://api.github.com'
+private_asset_url = 'https://privateassets.edison.sh'
 organization = 'pfizer'
 edison_file_name = '.edison_automated_upgrade'
 input_file = 'subscription.csv'
